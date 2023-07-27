@@ -8,13 +8,14 @@
    }
 */
 
-// parenthesis added before the math operation
+// Syntax Error: Unexpected token ')': remove the ) after product.sizes
 function getPriceInDollars(product) {
+  //return ("$" + product.priceInCents / 100).toFixed(2);
   return "$" + (product.priceInCents / 100).toFixed(2);
 }
 
-//Syntax error: product.sizes is not a function: remove ().
-//TypeError: Cannot read property 'length' of undefined: change to product.availableSizes.length
+//Type Error: product.sizes is not a function: remove ().
+//Reference Error: Cannot read property 'length' of undefined: change to product.availableSizes.length
 function checkIfSizeIsAvailable(product, size) {
   let sizes = [];
   //for(let i = 0; i <product.sizes(); i++){}
