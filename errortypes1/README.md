@@ -33,4 +33,4 @@ The following code will throw a runtime error because it is trying to access a p
 var x;
 console.log(x.y);
 ```
-[link to code examples](error-types.js)
+[link to code examples](../errortypes1/src/solution.js)
