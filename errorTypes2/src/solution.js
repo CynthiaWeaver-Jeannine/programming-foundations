@@ -24,8 +24,9 @@ function checkIfSizeIsAvailable(product, size) {
  
       sizes.push(product.availableSizes[i])
         if( sizes.length >0){
+          return true;
       }
-  return true;
+
     }
   }
 

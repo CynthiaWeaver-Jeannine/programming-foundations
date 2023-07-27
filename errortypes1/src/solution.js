@@ -10,25 +10,29 @@
 
 // parenthesis added before the math operation
 function getPriceInDollars(product) {
-  return ("$" + product.priceInCents / 100).toFixed(2);
+  return "$" + (product.priceInCents / 100).toFixed(2);
 }
 
 // `size` is a number between 0 and 16.
-// remooved the () from the if statement
+// removed the () from the if statement
 function checkIfSizeIsAvailable(product, size) {
-  let sizes = product.availableSizes;
-  for (let i = 0; i < sizes.length; i++) {
-    if (sizes[i] === size) {
-      return true;
+  let sizes = [];
+  for (let i =0; i<product.availableSizes.length; i++){
+    if (product.availableSizes[i] === size){
+      sizes.push(product.availableSizes[i])
+      if(sizes.length > 0){
+        return true;
+      }
     }
+    
+    
   }
-
-  return false;
+ return false;
 }
 
 // hint: is the name of the function correct?
 function getProductHeading(product) {
-  let price = getPrice(product);
+  let price = getPriceInDollars(product);
   return (
     product.name +
     ": " +
