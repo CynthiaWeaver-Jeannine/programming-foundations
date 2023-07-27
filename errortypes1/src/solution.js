@@ -1,6 +1,5 @@
 /*
-  The following functions have various syntax errors in them. Fix the bugs to get the tests to pass!
-  
+  Syntax errors checking for things like missing or unnecessary commas, semicolons, or quotes.
   When any of the following function's parameters reference `product`, they are referencing an object with the following shape:
    {
      name: "Slip Dress",
@@ -9,16 +8,16 @@
    }
 */
 
-// hint: check the syntax! is it missing something?
+// parenthesis added before the math operation
 function getPriceInDollars(product) {
-  return "$" + product.priceInCents / 100).toFixed(2);
+  return ("$" + product.priceInCents / 100).toFixed(2);
 }
 
 // `size` is a number between 0 and 16.
-// hint: remember that length is a property and not a function
+// remooved the () from the if statement
 function checkIfSizeIsAvailable(product, size) {
   let sizes = product.availableSizes;
-  for (let i = 0; i < sizes.length(); i++) {
+  for (let i = 0; i < sizes.length; i++) {
     if (sizes[i] === size) {
       return true;
     }
