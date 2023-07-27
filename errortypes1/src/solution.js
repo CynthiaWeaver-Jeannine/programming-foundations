@@ -13,10 +13,11 @@ function getPriceInDollars(product) {
   return "$" + (product.priceInCents / 100).toFixed(2);
 }
 
-// `size` is a number between 0 and 16.
-// removed the () from the if statement
+//Syntax error: product.sizes is not a function: remove ().
+//TypeError: Cannot read property 'length' of undefined: change to product.availableSizes.length
 function checkIfSizeIsAvailable(product, size) {
   let sizes = [];
+  //for(let i = 0; i <product.sizes(); i++){}
   for (let i =0; i<product.availableSizes.length; i++){
     if (product.availableSizes[i] === size){
       sizes.push(product.availableSizes[i])
@@ -29,9 +30,9 @@ function checkIfSizeIsAvailable(product, size) {
   }
  return false;
 }
-
-// hint: is the name of the function correct?
+//Reference error: getPrice is not defined: change to getPriceInDollars
 function getProductHeading(product) {
+  //let price = getPrice(product);
   let price = getPriceInDollars(product);
   return (
     product.name +
